@@ -23,30 +23,32 @@ A 561-feature vector with time and frequency domain variables.
 Its activity label.
 An identifier of the subject who carried out the experiment.
 
-#Section 1: Merges the training and the test sets to create one data set.
-xtest, xtrain contain the Training and the Test set
-ytest, ytrain containg the Training and the Test labels
-s_test, s_train contain the Training and the Test subjects
-data_feat concatenates by rows xtrain xtest
-data_act concatenates by rows ytrain ytest
-data_sub concatenates by rows s_train s_test
-feat_names contains the names of the features (column names for the data_feat dataset)
-sub_act merge data_act and data_sub
-df merge sub_act and data_feat. It's the dataframe used for the further analysis
+#Project sections
 
-#Section 2:Extracts only the measurements on the mean and standard deviation for each measurement.
+##Section 1: Merges the training and the test sets to create one data set.
+*xtest, xtrain contain the Training and the Test set
+*ytest, ytrain containg the Training and the Test labels
+*s_test, s_train contain the Training and the Test subjects
+*data_feat concatenates by rows xtrain xtest
+*data_act concatenates by rows ytrain ytest
+*data_sub concatenates by rows s_train s_test
+*feat_names contains the names of the features (column names for the data_feat dataset)
+*sub_act merge data_act and data_sub
+*df merge sub_act and data_feat. It's the dataframe used for the further analysis
+
+##Section 2:Extracts only the measurements on the mean and standard deviation for each measurement.
 ms_sub is a vector containing the index of the feature names about the measurment on mean and std. 
-sub_featnames subset feat_names according to ms_sub
-sel_var is the set of variable used to subset df dataframe
-df_sub is a subset of the dataframe df based on variables in sel_var 
+*sub_featnames subset feat_names according to ms_sub
+*sel_var is the set of variable used to subset df dataframe
+*df_sub is a subset of the dataframe df based on variables in sel_var 
 
-#Section 3: Uses descriptive activity names to name the activities in the data set
-act_names contains the descriptive activity names. it is a data frame used to factorize the column "activity" of the df_sub data frame
+##Section 3: Uses descriptive activity names to name the activities in the data set
+*act_names contains the descriptive activity names. it is a data frame used to factorize the column "activity" of the df_sub data frame
 
-#Section 4: Appropriately labels the data set with descriptive variable names.
-Use gsub function for pattern replacement to clean up the data labels.
+##Section 4: Appropriately labels the data set with descriptive variable names.
+*Use gsub function for pattern replacement to clean up the data labels.
 
-#Section 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Package dplyr has been used to aggregate data in df_sub according to activity and subject
-df_sub2 data set with the average of each veriable for each activity and subject
-tidydata.txt is the output of the previous analysis
+##Section 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+*Package dplyr has been used to aggregate data in df_sub according to activity and subject
+*df_sub2 data set with the average of each veriable for each activity and subject
+*tidydata.txt is the output of the previous analysis
