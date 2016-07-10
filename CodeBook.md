@@ -49,6 +49,6 @@ ms_sub is a vector containing the index of the feature names about the measurmen
 * Use gsub function for pattern replacement to clean up the data labels.
 
 ##Section 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-*Package dplyr has been used to aggregate data in df_sub according to activity and subject
+* Package dplyr has been used to aggregate data in df_sub according to activity and subject
 * df_sub2 data set with the average of each veriable for each activity and subject
 * tidydata.txt is the output of the previous analysis
